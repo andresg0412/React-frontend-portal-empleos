@@ -1,0 +1,121 @@
+/* src/components/Company.css */
+.company-container {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+.job-list {
+    flex: 1;
+    overflow-y: auto;
+    margin-right: 20px;
+}
+
+.job-card {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.job-card.selected {
+    background-color: #e0f7fa;
+}
+
+.job-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+.job-card p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.job-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.job-actions button {
+    padding: 5px 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.job-actions button:hover {
+    background-color: #0056b3;
+}
+
+.job-details {
+    flex: 2;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.job-details h2 {
+    margin-top: 0;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-actions button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.modal-actions button:hover {
+    background-color: #0056b3;
+}

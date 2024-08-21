@@ -1,0 +1,329 @@
+/*ESTILO 1 BOTON */
+
+.btn-primary {
+    background-color: #4A90E2;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-left: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #357ABD;
+    transform: scale(1.05);
+}
+
+.btn-primary:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+
+/* ESTILO 2 BOTON */
+
+.btn-secondary {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #4A90E2;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-left: 5px;
+}
+
+.btn-secondary:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary:focus {
+    outline: 3px solid #4A90E2;
+}
+
+
+/* ESTILO 3 BOTON */
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-left: 5px;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.btn-success:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+
+/* ESTILO 4 BOTON */
+
+.btn-warning {
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-left: 5px;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+}
+
+.btn-warning:focus {
+    outline: 3px solid rgba(0, 0, 0, 0.5);
+}
+
+
+/* ESTILO 5 BOTON */
+
+.btn-info {
+    background-color: transparent;
+    color: #17a2b8;
+    border: 2px solid #17a2b8;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.btn-info:hover {
+    color: #fff;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.btn-info:focus {
+    outline: 3px solid rgba(23, 162, 184, 0.5);
+}
+
+
+/* ESTILO 6 BOTON */
+
+.btn-gradient {
+    background: linear-gradient(45deg, #FF6F61, #D9A5A4);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(45deg, #FF4D4D, #D97373);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.btn-gradient:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.5);
+}
+
+
+/* ESTILO 7 BOTON */
+
+.btn-fill {
+    background-color: #4A90E2;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.btn-fill::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #357ABD;
+    transition: transform 0.3s;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.btn-fill:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.btn-fill:hover {
+    color: #fff;
+}
+
+.btn-fill span {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* ESTILO 8 BOTON */
+
+.btn-double-border {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #4A90E2;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.btn-double-border::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 2px solid #4A90E2;
+    border-radius: 12px;
+    transition: width 0.3s, height 0.3s;
+    transform: translate(-50%, -50%);
+}
+
+.btn-double-border:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-double-border:hover {
+    color: #4A90E2;
+    background-color: #f0f0f0;
+}
+
+
+/* ESTILO 9 BOTON */
+
+.btn-outline {
+    background-color: transparent;
+    color: #4A90E2;
+    border: 2px solid #4A90E2;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s, border-color 0.3s, transform 0.3s;
+}
+
+.btn-outline:hover {
+    color: #fff;
+    background-color: #4A90E2;
+    transform: translateY(-3px);
+}
+
+.btn-outline:focus {
+    outline: 3px solid rgba(74, 144, 226, 0.5);
+}
+
+
+/* ESTILO 10 BOTON */
+
+.btn-glow {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.6);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 20px rgba(40, 167, 69, 0.8);
+    transform: scale(1.05);
+}
+
+.btn-glow:focus {
+    outline: 3px solid rgba(40, 167, 69, 0.5);
+}
+
+
+/* ESTILO 11 BOTON */
+
+.btn-waves {
+    background-color: #FF5722;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-waves::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 20%);
+    transition: width 0.3s, height 0.3s, transform 0.3s;
+    transform: translate(-50%, -50%) scale(0);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.btn-waves:hover::after {
+    width: 400%;
+    height: 400%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.btn-waves:hover {
+    color: #fff;
+}
+
+.btn-waves span {
+    position: relative;
+    z-index: 1;
+}
