@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { getAuthToken } from '../utils/auth'
 
 // Configura la URL base de la API
 const API_BASE_URL = 'http://localhost:8000'; // Reemplaza con la URL de tu API
@@ -8,18 +7,6 @@ const api = axios.create({
     baseURL: 'http://localhost:8000',
 });
 
-api.interceptors.request.use(
-    (config) => {
-        const token = getAuthToken();
-        if (token) {
-            config.headers['Authorization'] = `Bearer ${token}`;
-        }
-        return config;
-    },
-    (error) => {
-        return Promise.reject(error);
-    }
-);
 
 // Función para obtener las vacantes
 export const getVacantes = async () => {

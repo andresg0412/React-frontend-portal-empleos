@@ -1,42 +1,14 @@
 // src/components/Company.js
 import React, { useState, useEffect } from 'react';
 import '../styles/Company.css';
-import {
-    getVacantes,
-    createVacante,
-    updateVacante,
-    deleteVacante,
-    finalizarVacante
-} from '../services/apiService';
 import ModalNewVacante from '../components/modal/modalNewVacante';
 import TextTitulo from '../components/text/titulo';
 import CardListVacante from '../components/Cards/cardListVacante';
 import HeaderCompany from '../components/Header/HeaderCompany';
 import FooterCompany from '../components/Footer/FooterCompany';
 
-const initialJobs = [
-    {
-        id: 1,
-        title: 'Desarrollador Full Stack',
-        subtitle: 'React y Node.js',
-        mode: 'Remoto',
-        salary: '$3,000 - $4,000 USD',
-        date: '2024-08-01',
-        description: 'Buscamos un desarrollador full stack con experiencia en React y Node.js.',
-        status: 'Activo',
-    },
-    {
-        id: 2,
-        title: 'Diseñador UX/UI',
-        subtitle: 'Experiencia en diseño móvil',
-        mode: 'Presencial',
-        salary: '$2,500 - $3,500 USD',
-        date: '2024-07-28',
-        description: 'Estamos buscando un diseñador UX/UI para un proyecto móvil.',
-        status: 'Activo',
-    },
-    // Agrega más vacantes según sea necesario
-];
+import { getVacantes, createVacante, updateVacante, deleteVacante, finalizarVacante } from '../services/apiService';
+
 
 const Company = () => {
     //const [jobs, setJobs] = useState(initialJobs);
@@ -61,6 +33,7 @@ const Company = () => {
             const data = await getVacantes();
             setJobs(data);
             setSelectedJob(jobs[0]);
+            alert('Has aplicado a la vacante');
         } catch (error) {
             console.error('Error al obtener las vacantes:', error);
         }

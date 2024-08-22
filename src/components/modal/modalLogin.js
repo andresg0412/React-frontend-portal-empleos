@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { useAuth } from '../../context/AuthContext';
 import './modalLogin.css';
 
 const ModalLogin = ({ isOpen, onClose }) => {
-    const { login } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -12,8 +10,6 @@ const ModalLogin = ({ isOpen, onClose }) => {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        await login(email, password);
-        onClose();
     };
 
     return ReactDOM.createPortal(

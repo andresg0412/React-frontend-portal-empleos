@@ -6,23 +6,17 @@ import Footer from '../components/Footer/Footer';
 import CardListVacante from '../components/Cards/cardListVacante';
 import { getVacantes } from '../services/apiService';
 import TextTitulo from '../components/text/titulo';
-import { useAuth } from '../context/AuthContext';
 import ModalLogin from '../components/modal/modalLogin';
 
 const Employees = () => {
     const [jobs, setJobs] = useState([]);
     const [selectedJob, setSelectedJob] = useState(null);
     const actions = false;
-    const { auth, logout } = useAuth();
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleApply = () => {
-        if (!auth) {
-            setIsModalOpen(true);
-            return;
-        } else {
             alert('Has aplicado a la vacante');
-        }
+        
     };
 
     const closeModal = () => setIsModalOpen(false);
@@ -32,6 +26,7 @@ const Employees = () => {
             const data = await getVacantes();
             setJobs(data);
             setSelectedJob(jobs[0]);
+            alert('Has aplicado a la vacante');
         } catch (error) {
             console.error('Error al obtener las vacantes:', error);
         }
